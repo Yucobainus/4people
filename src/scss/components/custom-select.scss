@@ -1,0 +1,130 @@
+.custom-select {
+    // .custom-select__input
+
+    &__input {
+        display: none;
+    }
+
+    // .custom-select__wrapper
+
+    &__wrapper {
+        position: relative;
+        font-size: $fontMedium;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    // .custom-select__field
+
+    &__field {
+        height: 48px;
+        padding: 10px;
+        position: relative;
+        border-radius: 3px;
+        border: 1px solid $white;
+        background: rgba(255, 255, 255, 0.85);
+        color: $black;
+        transition: .2s ease;
+        &::after,
+        &::before {
+            content: '';
+            position: absolute;
+            display: block;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            background-size: cover;
+            width: 20px;
+            height: 20px;
+            transition: .2s ease;
+        }
+
+        &::before {
+            background-image: url(../images/select-caret-down.svg);
+        }
+
+        &::after {
+            opacity: 0;
+            background-image: url(../images/select-caret-up.svg);
+        }
+
+        &_opened {
+            color: $white;
+            border: 1px solid $darkGrey;
+            border-radius: 3px 3px 0px 0px;
+            background: rgba(61, 64, 80, 0.85);
+
+            &::before {
+                opacity: 0;
+            }
+
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+
+    // .custom-select__bar
+
+    &__bar {
+        display: none;
+
+        &_opened {
+            display: block;
+        }
+
+        padding: 2px 4px 2px 0;
+        padding-left: 10px;
+        width: 100%;
+        border-radius: 0px 0px 3px 3px;
+        border: 1px solid $darkGrey;
+
+        background: $black;
+        position: absolute;
+        z-index: 30;
+        top: 48px;
+        left: 0;
+
+        ul {
+            padding: 12px 0;
+            max-height: 180px;
+            overflow-y: scroll;
+            color: $white;
+
+            &::-webkit-scrollbar {
+                background-color: $darkGrey;
+                width: 7px;
+                border-radius: 3px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: $blue;
+                border-radius: 3px;
+            }
+
+            &::-webkit-scrollbar-button {
+                display: none;
+            }
+        }
+
+    }
+
+    // .custom-select__item
+
+    &__item {
+        &:not(:last-child) {
+            padding-bottom: 20px;
+        }
+
+        transition: .5s ease;
+
+        &:hover {
+            color: #42A9ED;
+            cursor: pointer;
+        }
+    }
+}

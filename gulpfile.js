@@ -53,12 +53,6 @@ function images() {
         .pipe(dest('src/images'))
 }
 
-
-function sprite() {
-    return src(['src/images/**/*.svg', '!src/images/sources'])
-        .pipe(dest('src/images'))
-}
-
 function scripts() {
     return src(['src/js/**/*.js', '!src/js/main.min.js'])
         .pipe(concat('main.min.js'))
