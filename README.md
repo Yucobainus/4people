@@ -16,3 +16,4 @@
 
 **gulp build** - сборка проекта
 
+Ссылка на Pages: https://yucobainus.github.io/4people/dist/
