@@ -95,7 +95,6 @@ function building() {
         'src/images/**/*.*',
         '!src/images/sources/**/*.*',
         '!src/images/stack/**/*.*',
-        '!src/images/*.svg',
         'src/fonts/*.*'
     ], { base: 'src' })
         .pipe(dest('dist'))
