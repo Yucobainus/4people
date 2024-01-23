@@ -1,0 +1,64 @@
+@font-face {
+    font-family: "Lato";
+    src: url("../fonts/Lato-Regular.woff") format("woff"), url("../fonts/Lato-Regular.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("../fonts/Lato-Semibold.woff") format("woff"), url("../fonts/Lato-Semibold.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("../fonts/Lato-Bold.woff") format("woff"), url("../fonts/Lato-Bold.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("../fonts/Lato-Heavy.woff") format("woff"), url("../fonts/Lato-Heavy.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 800;
+}
+
+//Переменные
+
+$white: #fff;
+$black: #272733;
+$blue: #3E9CDC;
+$darkGrey: #3D4050;
+$lightGrey: #C3C3C3;
+
+$fontSmall: 13px;
+$fontMedium: 18px;
+$fontBig: 20px;
+
+$container: 1165px;
+$tablet: 900px;
+$mobile: 650px;
+$smallMobile: 449px;
+
+* {
+    font-family: Lato, sans-serif;
+}
+
+.container {
+    max-width: $container;
+    margin: 0 auto;
+    @media(max-width: $container){
+        padding: 0 15px;
+    }
+}
+
+._blue-font {
+    color: $blue;
+}
+
+.uppercase-text {
+    text-transform: uppercase;
+}
